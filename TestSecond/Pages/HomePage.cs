@@ -78,7 +78,8 @@ namespace TestSecond.Pages
             driver.FindElement(By.XPath("//*[@id=\"header\"]/div[1]/div[2]/div/div[1]/div/div/input")).SendKeys("дом");
             Thread.Sleep(3000);
             driver.FindElement(By.XPath("//*[@id=\"header\"]/div[1]/div[2]/div/div[1]/div/div/button[2]")).Click();
-            
+            Thread.Sleep(11000);
+
         }
 
         public void ClickProduct()
