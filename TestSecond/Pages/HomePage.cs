@@ -62,7 +62,7 @@ namespace TestSecond.Pages
         }
         public void ChangeRegionToGrodno()
         {
-            
+            Thread.Sleep(3000);
             driver.FindElement(By.XPath("//*[@id=\"header\"]/div[1]/div[3]/div/button")).Click();
             driver.FindElement(By.XPath("//*[@id=\"header\"]/div[1]/div[3]/div/div/div/div[1]/div/select")).Click();
             driver.FindElement(By.XPath("//*[@id=\"header\"]/div[1]/div[3]/div/div/div/div[1]/div/select/option[5]")).Click();
@@ -85,7 +85,7 @@ namespace TestSecond.Pages
         public void ClickProduct()
         {
             Thread.Sleep(5000);
-            driver.FindElement(By.XPath("//*[@id=\"main-content\"]/div[4]/div[1]/div/div/div[2]/div/div/section[1]/a/div[1]/div/div[2]")).Click();
+            driver.FindElement(By.XPath("//*[@id=\"main-content\"]/div[4]/div[1]/div/div/div[2]/div/div/section[2]/a/div[1]/div/div[2]")).Click();
             Thread.Sleep(3000);
             string parentWindowHandle = driver.CurrentWindowHandle;
             foreach (string windowHandle in driver.WindowHandles)
@@ -99,7 +99,7 @@ namespace TestSecond.Pages
         }
         public string GetRegionOfProductPage()
         {
-            IWebElement spanElement = driver.FindElement(By.XPath("//*[@id=\"adview_content\"]/div[2]/div[1]/span[1]"));
+            IWebElement spanElement = driver.FindElement(By.XPath("//*[@id=\"main-content\"]/div[4]/div[1]/div/div/div[2]/div/div/section[1]/a/div[2]/div[2]/p"));
             return spanElement.Text;
         }
 

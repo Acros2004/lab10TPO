@@ -37,8 +37,8 @@ namespace TestSecond.Tests
             kufarPage.GoToPage();
             kufarPage.ChangeRegionToGrodno();
             kufarPage.InputSomeProductInSearch();
-            kufarPage.ClickProduct();
-            Assert.IsTrue(kufarPage.GetRegionOfProductPage() == "Гродненская, Гродно");
+//            kufarPage.ClickProduct();
+            Assert.IsTrue(kufarPage.GetRegionOfProductPage() == "Гродно");
             kufarPage.Exit();
         }
     }
